@@ -31,20 +31,22 @@ All features are computed **before each match** using only past data (no leakage
 
 K-factors by tournament category: WC=60, UEFA/CONMEBOL/CAF=40, Other=35, Friendly=20. Home advantage: +100 effective ELO for non-neutral venues.
 
-**Final ELO rankings (post all 49,459 matches):**
+**ELO rankings after WC2026 group stage (60 matches, all neutral):**
 
-| Rank | Team | ELO |
-|---|---|---|
-| 1 | Argentina | 2090.0 |
-| 2 | Spain | 2071.7 |
-| 3 | France | 2049.7 |
-| 4 | England | 1986.3 |
-| 5 | Brazil | 1980.1 |
-| 6 | Colombia | 1973.3 |
-| 7 | Germany | 1958.5 |
-| 8 | Morocco | 1954.7 |
-| 9 | Portugal | 1953.9 |
-| 10 | Japan | 1938.2 |
+| Rank | Team | ELO | Change |
+|---|---|---|---|
+| 1 | Argentina | 2112.1 | +22 |
+| 2 | France | 2069.1 | +19 |
+| 3 | Spain | 2055.0 | -17 |
+| 4 | Brazil | 1999.1 | +19 |
+| 5 | Colombia | 1990.4 | +17 |
+| 6 | England | 1989.2 | +3 |
+| 7 | Morocco | 1981.0 | +26 |
+| 8 | Mexico | 1974.9 | +17 |
+| 9 | Norway | 1962.9 | +25 |
+| 10 | Netherlands | 1961.9 | +1 |
+
+> Notable movers: Ecuador +105 (beat Germany 2-1), Germany -16, USA -36 (lost to Turkey 3-2), Morocco +26, Norway +25.
 
 ### B — Rolling Form (last 10 matches per team)
 
@@ -125,26 +127,26 @@ XGBoost beats the naive baseline (always predict home_win, ~50%) by **+9.7 pp**.
 ## WC2026 Group Stage Predictions
 
 ### Prediction Method
-Each pending match is predicted using `xgb_model.predict_proba()`. **All three outcomes (Home Win, Draw, Away Win) are possible** — the outcome with the highest probability is taken as the prediction. Draw probabilities range 20–31% across group stage fixtures, reflecting genuine uncertainty.
+Each pending match is predicted using `xgb_model.predict_proba()`. **All three outcomes (Home Win, Draw, Away Win) are possible**. ELO ratings are updated with all 60 finished WC2026 group matches — all treated as **neutral venue** (no home advantage for USA, Canada, or Mexico, since World Cup matches are globally neutral regardless of host nation).
 
 ### All 12 Remaining Group Matches
 
 | Group | Home Team | Away Team | Prediction | H% | D% | A% |
 |---|---|---|---|---|---|---|
-| G | Senegal | Iraq | **Home Win** | 48% | 31% | 22% |
-| L | Panama | England | **Away Win** | 8% | 22% | 70% |
-| K | DR Congo | Uzbekistan | **Away Win** | 9% | 20% | 72% |
-| I | Norway | France | **Away Win** | 24% | 26% | 51% |
-| G | Egypt | Iran | **Away Win** | 29% | 30% | 41% |
-| H | Cape Verde | Saudi Arabia | **Home Win** | 39% | 29% | 32% |
-| H | Uruguay | Spain | **Away Win** | 14% | 25% | 62% |
-| J | Jordan | Argentina | **Away Win** | 6% | 14% | 80% |
-| K | Colombia | Portugal | **Home Win** | 36% | 28% | 36% |
-| L | Croatia | Ghana | **Home Win** | 68% | 21% | 11% |
-| J | Algeria | Austria | **Home Win** | 39% | 27% | 34% |
-| G | New Zealand | Belgium | **Away Win** | 14% | 22% | 64% |
+| I | Senegal | Iraq | **Home Win** | 52% | 26% | 22% |
+| L | Panama | England | **Away Win** | 8% | 20% | 72% |
+| K | DR Congo | Uzbekistan | **Away Win** | 17% | 24% | 60% |
+| I | Norway | France | **Away Win** | 26% | 25% | 49% |
+| G | Egypt | Iran | **Away Win** | 35% | 30% | 36% |
+| H | Cape Verde | Saudi Arabia | **Home Win** | 42% | 28% | 31% |
+| H | Uruguay | Spain | **Away Win** | 13% | 28% | 59% |
+| J | Jordan | Argentina | **Away Win** | 9% | 11% | 79% |
+| K | Colombia | Portugal | **Home Win** | 40% | 29% | 31% |
+| L | Croatia | Ghana | **Home Win** | 58% | 26% | 16% |
+| J | Algeria | Austria | **Home Win** | 36% | 29% | 35% |
+| G | New Zealand | Belgium | **Away Win** | 15% | 19% | 66% |
 
-> **Note on draws:** Egypt vs Iran (D=30%) and Norway vs France (D=26%) are the most draw-likely fixtures. No match is predicted as a draw because in all 12 cases either H% or A% exceeds D%, but draw probability is displayed to reflect real uncertainty.
+> **Key change vs previous version:** ELO now incorporates all 60 played WC2026 group results. Notable: Ecuador's 2-1 win over Germany crushed Germany's ELO (-16 pts); Turkey's 3-2 win over USA dropped USA significantly (-36 pts); Norway boosted by beating Iraq 4-1 and Senegal 3-2 (+25 pts). Predictions for draw-heavy fixtures reflect real uncertainty.
 
 ### Group Winners & Runners-Up
 
@@ -178,9 +180,21 @@ For knockout rounds, draws are resolved by comparing `P(home_win)` vs `P(away_wi
 
 | Round | Match | Winner |
 |---|---|---|
-| SF 1 | France vs England | France |
-| SF 2 | Spain vs Argentina | — |
-| **Final** | **Spain vs Argentina** | **🏆 Argentina** |
+| R32 | Germany vs South Korea | Germany |
+| R32 | France vs Paraguay | France |
+| R32 | Netherlands vs Morocco | **Morocco** (upset) |
+| R32 | Argentina vs Cape Verde | Argentina |
+| R16 | Germany vs France | **France** |
+| R16 | Morocco vs Canada | Morocco |
+| R16 | Spain vs Portugal | Spain |
+| R16 | Argentina vs Australia | Argentina |
+| QF | France vs Morocco | France |
+| QF | Spain vs United States | Spain |
+| QF | Brazil vs England | Brazil |
+| QF | Argentina vs Colombia | Argentina |
+| SF 1 | **France vs Spain** | **France** |
+| SF 2 | **Brazil vs Argentina** | **Argentina** |
+| **Final** | **France vs Argentina** | **🏆 Argentina** |
 
 ### Predicted Champion
 > ## 🏆 Argentina
@@ -189,28 +203,28 @@ For knockout rounds, draws are resolved by comparing `P(home_win)` vs `P(away_wi
 
 ## Monte Carlo Champion Probabilities
 
-5,000 bracket simulations drawing outcomes from `predict_proba()` at every round:
+5,000 bracket simulations drawing outcomes from `predict_proba()` at every round. ELO updated with all 60 WC2026 group matches (neutral=True for all):
 
 | Rank | Team | Championship Probability |
 |---|---|---|
-| 1 | **Argentina** | **33.1%** |
-| 2 | Spain | 23.1% |
-| 3 | France | 12.1% |
-| 4 | England | 7.2% |
-| 5 | Colombia | 7.1% |
-| 6 | Germany | 3.7% |
-| 7 | Brazil | 3.5% |
-| 8 | Morocco | 2.7% |
+| 1 | **Argentina** | **34.1%** |
+| 2 | France | 18.4% |
+| 3 | Spain | 15.2% |
+| 4 | Colombia | 6.9% |
+| 5 | Brazil | 6.4% |
+| 6 | England | 4.4% |
+| 7 | Morocco | 4.1% |
+| 8 | Mexico | 2.2% |
 | 9 | Portugal | 2.1% |
-| 10 | Netherlands | 1.0% |
-| 11 | Norway | 0.9% |
-| 12 | Mexico | 0.8% |
-| 13 | Japan | 0.6% |
-| 14 | Switzerland | 0.6% |
-| 15 | Croatia | 0.4% |
-| 16 | Iran | 0.3% |
+| 10 | Norway | 1.6% |
+| 11 | Netherlands | 1.4% |
+| 12 | Germany | 1.2% |
+| 13 | Switzerland | 0.5% |
+| 14 | United States | 0.5% |
+| 15 | Japan | 0.3% |
+| 16 | Croatia | 0.3% |
 
-> Probabilities renormalized after removing unresolvable bracket slots ("?" ≈ 4.2% of raw simulations). The "?" occurs when a third-place team slot cannot be deterministically assigned; redistributing it raises all real team probabilities by ~×1.044.
+> **vs previous version:** France 12.1% → 18.4% (big winner from WC group form); Spain 23.1% → 15.2% (knocked out by France in SF); Germany 3.7% → 1.2% (post-Ecuador-loss ELO hit); Morocco 2.7% → 4.1% (giant-killing path R32+R16). Final changed from Spain–Argentina to **France–Argentina**.
 
 ---
 
