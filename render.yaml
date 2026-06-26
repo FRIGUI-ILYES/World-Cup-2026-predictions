@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wc2026-dashboard
+    runtime: node
+    rootDir: dashboard
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
