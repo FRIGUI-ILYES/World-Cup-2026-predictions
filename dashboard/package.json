@@ -1,0 +1,25 @@
+{
+  "name": "wc2026-dashboard",
+  "version": "1.0.0",
+  "description": "FIFA World Cup 2026 Prediction Analytics Dashboard — XGBoost + Monte Carlo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "fifa",
+    "world-cup",
+    "football",
+    "soccer",
+    "prediction",
+    "machine-learning",
+    "dashboard"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,105 @@
+id,group,type,matchday,local_date,local_date_parsed,home_team_id,away_team_id,home_team,away_team,home_code,away_code,home_score,away_score,home_scorers,away_scorers,stadium_id,finished,time_elapsed,goal_diff,total_goals,match_result
+6,D,group,1,06/13/2026 21:00,2026-06-13 21:00:00,15,16,Australia,Turkey,,,2,0,"{""Nestory Irankunda 27'"",""C. Metcalfe 75'""}",null,13,True,finished,2,2,home_win
+8,B,group,1,06/13/2026 12:00,2026-06-13 12:00:00,7,8,Qatar,Switzerland,,,1,1,"{""B. Khoukhi 90'+5'""}","{""Breel Embolo 17' (p)""}",15,True,finished,0,2,draw
+31,D,group,2,06/19/2026 12:00,2026-06-19 12:00:00,13,15,United States,Australia,,,2,0,"{""Kamrvn Bargs 11'"",""Alex Freeman 43'""}",null,14,True,finished,2,2,home_win
+33,E,group,2,06/20/2026 16:00,2026-06-20 16:00:00,17,19,Germany,Ivory Coast,,,2,1,"{""Dniz Avndav 68'"",""Dniz Avndav 90+4'""}","{""Franck Kessié 30'""}",12,True,finished,1,3,home_win
+35,F,group,2,06/20/2026 12:00,2026-06-20 12:00:00,21,23,Netherlands,Sweden,,,5,1,"{""Brian Brobbey 5'"",""Brian Brobbey 17'"",""Kvdi Khakpv 47'"",""Kvdi Khakpv 54'"",""Crysencio Summerville 89'""}","{""Anthony Elanga 59'""}",5,True,finished,4,6,home_win
+41,I,group,2,06/22/2026 17:00,2026-06-22 17:00:00,33,35,France,Iraq,,,3,0,"{""Kylian Mbappé 14'"",""Kylian Mbappé 54'"",""Ousmane Dembélé 66'""}",null,10,True,finished,3,3,home_win
+42,I,group,2,06/22/2026 20:00,2026-06-22 20:00:00,36,34,Norway,Senegal,,,3,2,"{""Markvs Hlmgrn Pdrsn 43'"",""Erling Haaland 48'"",""Erling Haaland 58'""}","{""Ismaïla Sarr 53'"",""Ismaïla Sarr 90+3'""}",11,True,finished,1,5,home_win
+59,F,group,3,06/25/2026 18:00,2026-06-25 18:00:00,22,23,Japan,Sweden,,,1,1,"{""Daizen Maeda 56'""}","{""Anthony Elanga 62'""}",4,True,finished,0,2,draw
+95,R16,r16,5,07/07/2026 12:00,2026-07-07 12:00:00,0,0,Winner Match 86,Winner Match 88,,,0,0,null,null,7,False,notstarted,0,0,not_finished
+101,SF,sf,7,07/14/2026 14:00,2026-07-14 14:00:00,0,0,Winner Match 97,Winner Match 98,,,0,0,null,null,4,False,notstarted,0,0,not_finished
+102,SF,sf,7,07/15/2026 15:00,2026-07-15 15:00:00,0,0,Winner Match 99,Winner Match 100,,,0,0,null,null,7,False,notstarted,0,0,not_finished
+5,C,group,1,06/13/2026 21:00,2026-06-13 21:00:00,11,12,Haiti,Scotland,,,0,1,null,"{""J. McGinn 28'""}",9,True,finished,-1,1,away_win
+22,L,group,1,06/17/2026 15:00,2026-06-17 15:00:00,45,46,England,Croatia,,,4,2,"{""H. Kane 12'(p)"",""H. Kane 42'"",""J. Bellingham 47'"",""M. Rashford 85'""}","{""M. Baturina 36'"",""P. Musa 45+5'""}",4,True,finished,2,6,home_win
+39,H,group,2,06/21/2026 12:00,2026-06-21 12:00:00,29,31,Spain,Saudi Arabia,,,4,0,"{""Lamine Yamal 10'"",""Mikel Oyarzabal 21'"",""Mikel Oyarzabal 24'"",""Hassan Mohamed Altmbkti 49'""}",null,7,True,finished,4,4,home_win
+44,J,group,2,06/22/2026 20:00,2026-06-22 20:00:00,40,38,Jordan,Algeria,,,1,2,"{""Al Rashdan 36'""}","{""Nzir Bnbvali 69'"",""Amine Gouiri 82'""}",15,True,finished,-1,3,away_win
+45,K,group,2,06/23/2026 12:00,2026-06-23 12:00:00,41,43,Portugal,Uzbekistan,,,5,0,"{""Cristiano Ronaldo 6'"",""Nvnv Mndz 17'"",""Cristiano Ronaldo 39'"",""Abdalvhid Namtvf 60'"",""Rafael Leão 87'""}",null,5,True,finished,5,5,home_win
+46,L,group,2,06/23/2026 19:00,2026-06-23 19:00:00,48,46,Panama,Croatia,,,0,1,null,"{""Ante Budimir 54'""}",12,True,finished,-1,1,away_win
+52,A,group,3,06/24/2026 19:00,2026-06-24 19:00:00,4,1,Czech Republic,Mexico,,,0,3,null,"{""Mateo Chávez 55'"",""Jvlian Kviinvnz 61'"",""Álvaro Fidalgo 90+4'""}",1,True,finished,-3,3,away_win
+60,F,group,3,06/25/2026 18:00,2026-06-25 18:00:00,24,21,Tunisia,Netherlands,,,1,3,"{""Hazm Mstvri 54'""}","{""Alis Skhiri 3'"",""Brian Brobbey 7'"",""Ian Fn Hkh 62'""}",6,True,finished,-2,4,away_win
+61,I,group,3,06/26/2026 15:00,2026-06-26 15:00:00,34,35,Senegal,Iraq,,,0,0,null,null,12,False,notstarted,0,0,not_finished
+67,L,group,3,06/27/2026 17:00,2026-06-27 17:00:00,48,45,Panama,England,,,0,0,null,null,11,False,notstarted,0,0,not_finished
+72,K,group,3,06/27/2026 19:30,2026-06-27 19:30:00,42,43,Democratic Republic of the Congo,Uzbekistan,,,0,0,null,null,7,False,notstarted,0,0,not_finished
+86,R32,r32,4,07/03/2026 18:00,2026-07-03 18:00:00,37,0,Argentina,Runner-up Group H,,,0,0,null,null,8,False,notstarted,0,0,not_finished
+88,R32,r32,4,07/03/2026 13:00,2026-07-03 13:00:00,0,0,Runner-up Group D,Runner-up Group G,,,0,0,null,null,4,False,notstarted,0,0,not_finished
+100,QF,qf,6,07/11/2026 20:00,2026-07-11 20:00:00,0,0,Winner Match 95,Winner Match 96,,,0,0,null,null,6,False,notstarted,0,0,not_finished
+2,A,group,1,06/11/2026 20:00,2026-06-11 20:00:00,3,4,South Korea,Czech Republic,,,2,1,"{""I.B. Hwang 67'"",""H.G. Oh 80'""}","{""L. Krejčí 59'""}",2,True,finished,1,3,home_win
+4,D,group,1,06/12/2026 18:00,2026-06-12 18:00:00,13,14,United States,Paraguay,,,4,1,"{""D. Bobadilla 7'(OG)"",""F. Balogun 31'"",""F. Balogun 45'+5'"",""G. Reyna 90'+8'""}","{""Maurício 73'""}",16,True,finished,3,5,home_win
+17,I,group,1,06/16/2026 15:00,2026-06-16 15:00:00,33,34,France,Senegal,,,3,1,"{""K. Mbappé 66'"",""B. Barcola 82'"",""K. Mbappé 90+6'""}","{""I. Mbaye 90+5'""}",11,True,finished,2,4,home_win
+18,I,group,1,06/16/2026 18:00,2026-06-16 18:00:00,35,36,Iraq,Norway,,,1,4,"{""Aymen Hussein 39'""}","{""Erling Haaland 29'"",""Erling Haaland 43'"",""Leo Østigård 76'"",""Aymen Hussein 90+7'""}",9,True,finished,-3,5,away_win
+21,K,group,1,06/17/2026 12:00,2026-06-17 12:00:00,41,42,Portugal,Democratic Republic of the Congo,,,1,1,"{""J. Neves 6'""}","{""Y. Wissa 45+5'""}",5,True,Finished,0,2,draw
+37,G,group,2,06/21/2026 12:00,2026-06-21 12:00:00,25,27,Belgium,Iran,,,0,0,null,null,16,True,finished,0,0,draw
+50,C,group,3,06/24/2026 18:00,2026-06-24 18:00:00,10,11,Morocco,Haiti,,,4,2,"{""Achraf Hakimi 39'"",""Asmaail Saibari 45+1'"",""Svfian Rhimi 78'"",""Gessime Yassine 89'""}","{""Yassine Bounou 10'"",""Wilson Isidor 43'""}",7,True,finished,2,6,home_win
+51,A,group,3,06/24/2026 19:00,2026-06-24 19:00:00,2,3,South Africa,South Korea,,,1,0,"{""Taplv Maskv 63'""}",null,3,True,finished,1,1,home_win
+87,R32,r32,4,07/03/2026 20:30,2026-07-03 20:30:00,0,0,Winner Group K,3rd Group D/E/I/J/L,,,0,0,null,null,6,False,notstarted,0,0,not_finished
+98,QF,qf,6,07/10/2026 12:00,2026-07-10 12:00:00,0,0,Winner Match 93,Winner Match 94,,,0,0,null,null,16,False,notstarted,0,0,not_finished
+9,E,group,1,06/14/2026 19:00,2026-06-14 19:00:00,19,20,Ivory Coast,Ecuador,,,1,0,"{""A. Diallo 90'""}",null,10,True,finished,1,1,home_win
+10,E,group,1,06/14/2026 12:00,2026-06-14 12:00:00,17,18,Germany,Curaçao,,,7,1,"{""Felix Nmecha 7'"",""N. Schlotterbeck 38'"",""K. Havertz 45'+5'(p)"",""J. Musiala 47'"",""N. Brown 68'"",""D. Undav 78'"",""K. Havertz 88'""}","{""L. Comenencia 21'""}",5,True,finished,6,8,home_win
+12,F,group,1,06/14/2026 20:00,2026-06-14 20:00:00,23,24,Sweden,Tunisia,,,5,1,"{""Y.Ayari 7'"",""A. Isak 30'"",""V. Gyökeres 59'"",""M. Svanberg 84'"",""Y.Ayari 90'+6'""}","{""O. Rekik 43'""}",3,True,finished,4,6,home_win
+25,A,group,2,06/18/2026 19:00,2026-06-18 19:00:00,1,3,Mexico,South Korea,,,1,0,"{""Luis Romo 50'""}",null,2,True,finished,1,1,home_win
+27,B,group,2,06/18/2026 15:00,2026-06-18 15:00:00,5,7,Canada,Qatar,,,6,0,"{""Kail Larin 16'"",""Jonathan David 29'"",""Jonathan David 45+3'"",""Nathan Saliba 64'"",""Mohamed Almnai 75'"",""Jonathan David 90+2'""}",null,13,True,finished,6,6,home_win
+30,C,group,2,06/19/2026 18:00,2026-06-19 18:00:00,12,10,Scotland,Morocco,,,0,1,null,"{""Asmaail Saibari 2'""}",9,True,finished,-1,1,away_win
+32,D,group,2,06/19/2026 20:00,2026-06-19 20:00:00,16,14,Turkey,Paraguay,,,0,1,null,"{""Matías Galarza 2'""}",15,True,finished,-1,1,away_win
+43,J,group,2,06/22/2026 12:00,2026-06-22 12:00:00,37,39,Argentina,Austria,,,2,0,"{""Lionel Messi 38'"",""Lionel Messi 90+5'""}",null,4,True,finished,2,2,home_win
+49,C,group,3,06/24/2026 18:00,2026-06-24 18:00:00,12,9,Scotland,Brazil,,,0,3,null,"{""Vinícius Júnior 7'"",""Vinícius Júnior 45+3'"",""Matheus Cunha 60'""}",8,True,finished,-3,3,away_win
+53,B,group,3,06/24/2026 12:00,2026-06-24 12:00:00,6,7,Bosnia and Herzegovina,Qatar,,,3,1,"{""Karim Alaibgvvich 29'"",""Abvnad 34'"",""Armin Mhmich 80'""}","{""Hassan Al-Haydos 42'""}",14,True,finished,2,4,home_win
+58,D,group,3,06/25/2026 19:00,2026-06-25 19:00:00,16,13,Turkey,United States,,,3,2,"{""Arda Güler 10'"",""Baris Alpr Ailmaz 31'"",""Kan Aihan 90+8'""}","{""Auston Trusty 3'"",""Sebastian Berhalter 49'""}",16,True,finished,1,5,home_win
+62,I,group,3,06/26/2026 15:00,2026-06-26 15:00:00,36,33,Norway,France,,,0,0,null,null,9,False,notstarted,0,0,not_finished
+63,G,group,3,06/26/2026 20:00,2026-06-26 20:00:00,26,27,Egypt,Iran,,,0,0,null,null,14,False,notstarted,0,0,not_finished
+65,H,group,3,06/26/2026 19:00,2026-06-26 19:00:00,30,31,Cape Verde,Saudi Arabia,,,0,0,null,null,5,False,notstarted,0,0,not_finished
+66,H,group,3,06/26/2026 18:00,2026-06-26 18:00:00,32,29,Uruguay,Spain,,,0,0,null,null,2,False,notstarted,0,0,not_finished
+70,J,group,3,06/27/2026 21:00,2026-06-27 21:00:00,40,37,Jordan,Argentina,,,0,0,null,null,4,False,notstarted,0,0,not_finished
+76,R32,r32,4,06/29/2026 12:00,2026-06-29 12:00:00,9,0,Brazil,Runner-up Group F,,,0,0,null,null,5,False,notstarted,0,0,not_finished
+83,R32,r32,4,07/02/2026 19:00,2026-07-02 19:00:00,0,0,Runner-up Group K,Runner-up Group L,,,0,0,null,null,12,False,notstarted,0,0,not_finished
+85,R32,r32,4,07/02/2026 20:00,2026-07-02 20:00:00,8,0,Switzerland,3rd Group E/F/G/I/J,,,0,0,null,null,13,False,notstarted,0,0,not_finished
+93,R16,r16,5,07/06/2026 14:00,2026-07-06 14:00:00,0,0,Winner Match 83,Winner Match 84,,,0,0,null,null,4,False,notstarted,0,0,not_finished
+96,R16,r16,5,07/07/2026 13:00,2026-07-07 13:00:00,0,0,Winner Match 85,Winner Match 87,,,0,0,null,null,13,False,notstarted,0,0,not_finished
+1,A,group,1,06/11/2026 13:00,2026-06-11 13:00:00,1,2,Mexico,South Africa,,,2,0,"{“J. Quiñones 9'”,”R. Jiménez 67'”}",null,1,True,finished,2,2,home_win
+7,C,group,1,06/13/2026 18:00,2026-06-13 18:00:00,9,10,Brazil,Morocco,,,1,1,"{""V. Júnior 32'""}","{""I. Saibari 21'""}",11,True,finished,0,2,draw
+11,F,group,1,06/14/2026 15:00,2026-06-14 15:00:00,21,22,Netherlands,Japan,,,2,2,"{""Virgil van Dijk 51'"",""C. Summerville 64'""}","{""K. Nakamura 57'"",""K. Ogawa 89'""}",4,True,finished,0,4,draw
+26,B,group,2,06/18/2026 12:00,2026-06-18 12:00:00,8,6,Switzerland,Bosnia and Herzegovina,,,4,1,"{""Jvhan Mnzambi 74'"",""Rvbn Vargas 84'"",""Jvhan Mnzambi 90'""}","{""Armin Mhmich 90+3'""}",16,True,finished,3,5,home_win
+29,C,group,2,06/19/2026 21:00,2026-06-19 21:00:00,9,11,Brazil,Haiti,,,3,0,"{""Matheus Cunha 23'"",""Matheus Cunha 36'"",""Vinícius Júnior 45+3'""}",null,10,True,finished,3,3,home_win
+36,F,group,2,06/20/2026 22:00,2026-06-20 22:00:00,24,22,Tunisia,Japan,,,0,4,null,"{""Daichi Kamada 4'"",""Aiash Ivida 31'"",""Junya Itō 69'"",""Aiash Ivida 83'""}",3,True,finished,-4,4,away_win
+38,G,group,2,06/21/2026 18:00,2026-06-21 18:00:00,28,26,New Zealand,Egypt,,,1,3,"{""Fin Svrman 15'""}","{""Mostafa Ziko 58'"",""Mohamed Salah 67'"",""Mahmoud Hassan Trezeguet 82'""}",13,True,finished,-2,4,away_win
+40,H,group,2,06/21/2026 18:00,2026-06-21 18:00:00,32,30,Uruguay,Cape Verde,,,2,2,"{""Maximiliano Araújo 44'"",""Agustín Canobbio 45+6'""}","{""Kevin Pina 21'"",""Hliv Varla 61'""}",8,True,finished,0,4,draw
+47,K,group,2,06/23/2026 20:00,2026-06-23 20:00:00,44,42,Colombia,Democratic Republic of the Congo,,,1,0,"{""Dnil Mvnvz 76'""}",null,2,True,finished,1,1,home_win
+71,K,group,3,06/27/2026 19:30,2026-06-27 19:30:00,44,41,Colombia,Portugal,,,0,0,null,null,8,False,notstarted,0,0,not_finished
+73,R32,r32,4,06/28/2026 12:00,2026-06-28 12:00:00,2,5,South Africa,Canada,,,0,0,null,null,16,False,notstarted,0,0,not_finished
+77,R32,r32,4,06/30/2026 17:00,2026-06-30 17:00:00,0,0,Winner Group I,3rd Group C/D/F/G/H,,,0,0,null,null,11,False,notstarted,0,0,not_finished
+84,R32,r32,4,07/02/2026 12:00,2026-07-02 12:00:00,0,0,Winner Group H,Runner-up Group J,,,0,0,null,null,16,False,notstarted,0,0,not_finished
+90,R16,r16,5,07/04/2026 12:00,2026-07-04 12:00:00,0,0,Winner Match 73,Winner Match 75,,,0,0,null,null,5,False,notstarted,0,0,not_finished
+92,R16,r16,5,07/05/2026 18:00,2026-07-05 18:00:00,0,0,Winner Match 79,Winner Match 80,,,0,0,null,null,1,False,notstarted,0,0,not_finished
+94,R16,r16,5,07/06/2026 17:00,2026-07-06 17:00:00,0,0,Winner Match 81,Winner Match 82,,,0,0,null,null,14,False,notstarted,0,0,not_finished
+14,H,group,1,06/15/2026 12:00,2026-06-15 12:00:00,29,30,Spain,Cape Verde,,,0,0,null,null,7,True,finished,0,0,draw
+16,H,group,1,06/15/2026 18:00,2026-06-15 18:00:00,31,32,Saudi Arabia,Uruguay,,,1,1,"{""Abdulelah Al-Amri 41'""}","{""Maximiliano Araújo 80'""}",8,True,finished,0,2,draw
+20,J,group,1,06/16/2026 21:00,2026-06-16 21:00:00,39,40,Austria,Jordan,,,3,1,"{""Rvmanv Ashmid 21'"",""Izn Alarb 76'""}","{""Ali Avlvan 50'""}",15,True,finished,2,4,home_win
+23,K,group,1,06/17/2026 20:00,2026-06-17 20:00:00,43,44,Uzbekistan,Colombia,,,1,3,"{""Abas Bk Fiz Allh Af 60'""}","{""Dnil Mvnvz 40'"",""Lviiz Diaz 65'"",""Khamintvn Kampaz 90+9'""}",1,True,finished,-2,4,away_win
+91,R16,r16,5,07/05/2026 16:00,2026-07-05 16:00:00,0,0,Winner Match 76,Winner Match 78,,,0,0,null,null,11,False,notstarted,0,0,not_finished
+97,QF,qf,6,07/09/2026 16:00,2026-07-09 16:00:00,0,0,Winner Match 89,Winner Match 90,,,0,0,null,null,9,False,notstarted,0,0,not_finished
+104,FINAL,final,9,07/19/2026 15:00,2026-07-19 15:00:00,0,0,Winner Match 101,Winner Match 102,,,0,0,null,null,11,False,notstarted,0,0,not_finished
+3,B,group,1,06/12/2026 15:00,2026-06-12 15:00:00,5,6,Canada,Bosnia and Herzegovina,,,1,1,"{""C. Larin 11'""}","{""Jovo Lukić 21'""}",12,True,finished,0,2,draw
+13,G,group,1,06/15/2026 18:00,2026-06-15 18:00:00,27,28,Iran,New Zealand,,,2,2,"{""Ramin Rezaiian 32'"",""Mohammad Mohebi 64'""}","{""Elijah Just 7'"",""Elijah Just 54'""}",16,True,finished,0,4,draw
+19,J,group,1,06/16/2026 20:00,2026-06-16 20:00:00,37,38,Argentina,Algeria,,,3,0,"{""Lionel Messi 17'"",""Lionel Messi 60'"",""Lionel Messi 76'""}",null,6,True,finished,3,3,home_win
+24,L,group,1,06/17/2026 19:00,2026-06-17 19:00:00,47,48,Ghana,Panama,,,1,0,"{""Kalb Iirnki 90+5'""}",null,12,True,finished,1,1,home_win
+28,A,group,2,06/18/2026 12:00,2026-06-18 12:00:00,4,2,Czech Republic,South Africa,,,1,1,"{""‫mikhal Sadilk 6'""}",null,7,True,finished,0,2,draw
+48,L,group,2,06/23/2026 16:00,2026-06-23 16:00:00,45,47,England,Ghana,,,0,0,null,null,9,True,finished,0,0,draw
+55,E,group,3,06/25/2026 16:00,2026-06-25 16:00:00,18,19,Curaçao,Ivory Coast,,,0,2,null,"{""Nikvlas Ph Ph 7'"",""Nikvlas Ph Ph 64'""}",10,True,finished,-2,2,away_win
+56,E,group,3,06/25/2026 16:00,2026-06-25 16:00:00,20,17,Ecuador,Germany,,,2,1,"{""Nilsvn Angvlv 9'"",""Gvnzalv Plata 77'""}","{""Leroy Sané 2'""}",11,True,finished,1,3,home_win
+68,L,group,3,06/27/2026 17:00,2026-06-27 17:00:00,46,47,Croatia,Ghana,,,0,0,null,null,10,False,notstarted,0,0,not_finished
+69,J,group,3,06/27/2026 21:00,2026-06-27 21:00:00,38,39,Algeria,Austria,,,0,0,null,null,6,False,notstarted,0,0,not_finished
+74,R32,r32,4,06/29/2026 16:30,2026-06-29 16:30:00,17,0,Germany,3rd Group A/B/C/D/F,,,0,0,null,null,9,False,notstarted,0,0,not_finished
+81,R32,r32,4,07/01/2026 17:00,2026-07-01 17:00:00,13,0,United States,3rd Group B/E/F/I/J,,,0,0,null,null,15,False,notstarted,0,0,not_finished
+103,3RD,third,8,07/18/2026 17:00,2026-07-18 17:00:00,0,0,Loser Match 101,Loser Match 102,,,0,0,null,null,8,False,notstarted,0,0,not_finished
+15,G,group,1,06/15/2026 12:00,2026-06-15 12:00:00,25,26,Belgium,Egypt,,,1,1,"{""Mohamed Hany 66'""}","{""Emam Ashour 20'""}",14,True,finished,0,2,draw
+34,E,group,2,06/20/2026 19:00,2026-06-20 19:00:00,20,18,Ecuador,Curaçao,,,0,0,null,null,6,True,finished,0,0,draw
+54,B,group,3,06/24/2026 12:00,2026-06-24 12:00:00,8,5,Switzerland,Canada,,,2,1,"{""Rubén Vargas 46'"",""Jvhan Mnzambi 57'""}","{""Prvmis Divid 76'""}",13,True,finished,1,3,home_win
+57,D,group,3,06/25/2026 19:00,2026-06-25 19:00:00,14,15,Paraguay,Australia,,,0,0,null,null,15,True,finished,0,0,draw
+64,G,group,3,06/26/2026 20:00,2026-06-26 20:00:00,28,25,New Zealand,Belgium,,,0,0,null,null,13,False,notstarted,0,0,not_finished
+75,R32,r32,4,06/29/2026 19:00,2026-06-29 19:00:00,0,10,Winner Group F,Morocco,,,0,0,null,null,3,False,notstarted,0,0,not_finished
+78,R32,r32,4,06/30/2026 12:00,2026-06-30 12:00:00,0,0,Runner-up Group E,Runner-up Group I,,,0,0,null,null,4,False,notstarted,0,0,not_finished
+79,R32,r32,4,06/30/2026 19:00,2026-06-30 19:00:00,1,0,Mexico,3rd Group C/E/F/H/I,,,0,0,null,null,1,False,notstarted,0,0,not_finished
+80,R32,r32,4,07/01/2026 12:00,2026-07-01 12:00:00,0,0,Winner Group L,3rd Group E/H/I/J/K,,,0,0,null,null,7,False,notstarted,0,0,not_finished
+82,R32,r32,4,07/01/2026 13:00,2026-07-01 13:00:00,0,0,Winner Group G,3rd Group A/E/H/I/J,,,0,0,null,null,14,False,notstarted,0,0,not_finished
+89,R16,r16,5,07/04/2026 17:00,2026-07-04 17:00:00,0,0,Winner Match 74,Winner Match 77,,,0,0,null,null,10,False,notstarted,0,0,not_finished
+99,QF,qf,6,07/11/2026 17:00,2026-07-11 17:00:00,0,0,Winner Match 91,Winner Match 92,,,0,0,null,null,8,False,notstarted,0,0,not_finished

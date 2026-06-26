@@ -1,0 +1,42 @@
+# ── Python ────────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Node ──────────────────────────────────────────────────────────
+dashboard/node_modules/
+dashboard/npm-debug.log*
+dashboard/yarn-error.log*
+dashboard/.env
+
+# ── Environment / secrets ─────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Claude Code (machine-local settings) ─────────────────────────
+.claude/settings.local.json
+
+# ── OS ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ── IDE / editors ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

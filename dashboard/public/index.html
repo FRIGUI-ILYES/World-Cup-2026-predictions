@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WC 2026 Prediction System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── SIDEBAR ─────────────────────────────────────────────── -->
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">⚽</div>
+      <div class="logo-text">
+        <span class="logo-title">WC 2026</span>
+        <span class="logo-sub">Predictor</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-item active" data-page="dashboard">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Dashboard</span>
+      </button>
+      <button class="nav-item" data-page="explorer">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Data Explorer</span>
+      </button>
+      <button class="nav-item" data-page="predictions">
+        <span class="nav-icon">🎯</span>
+        <span class="nav-label">Predictions</span>
+      </button>
+      <button class="nav-item" data-page="elo">
+        <span class="nav-icon">🏆</span>
+        <span class="nav-label">ELO Rankings</span>
+      </button>
+      <button class="nav-item" data-page="wc2026">
+        <span class="nav-icon">🌍</span>
+        <span class="nav-label">WC 2026</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-text">
+        <span>XGBoost + Monte Carlo</span>
+        <span>49,459 matches trained</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── MAIN CONTENT ────────────────────────────────────────── -->
+  <main id="main-content">
+    <!-- Topbar -->
+    <header id="topbar">
+      <div class="topbar-left">
+        <button id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+        <h1 id="topbar-title">Dashboard</h1>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-badge">⚡ XGBoost 59.7%</span>
+        <span class="topbar-badge accent">⚽ WC 2026 Predictor</span>
+      </div>
+    </header>
+
+    <!-- ── PAGE: DASHBOARD ──────────────────────────────────── -->
+    <div id="page-dashboard" class="page active">
+      <!-- Greeting Card -->
+      <div class="greeting-card">
+        <div class="greeting-content">
+          <div class="greeting-text">
+            <h2>FIFA World Cup 2026 Prediction</h2>
+            <p>Machine learning predictions for the World Cup hosted across USA, Canada & Mexico. Trained on 149 years of international football history.</p>
+          </div>
+          <div class="greeting-badge">
+            <span class="champion-label">Predicted Champion</span>
+            <span class="champion-name">🇦🇷 Argentina</span>
+            <span class="champion-prob">33.1% probability</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon">📂</div>
+          <div class="kpi-body">
+            <div class="kpi-value">49,459</div>
+            <div class="kpi-label">Training Matches</div>
+            <div class="kpi-sub">1872 – 2024</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">🎯</div>
+          <div class="kpi-body">
+            <div class="kpi-value">59.7%</div>
+            <div class="kpi-label">XGBoost Accuracy</div>
+            <div class="kpi-sub">+9.7pp vs baseline</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">🌍</div>
+          <div class="kpi-body">
+            <div class="kpi-value">48</div>
+            <div class="kpi-label">Teams in WC 2026</div>
+            <div class="kpi-sub">12 groups, 104 matches</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">🔮</div>
+          <div class="kpi-body">
+            <div class="kpi-value">5,000</div>
+            <div class="kpi-label">Monte Carlo Draws</div>
+            <div class="kpi-sub">Champion probabilities</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: Monte Carlo + Model + Predicted Final -->
+      <div class="cards-row-3">
+        <div class="card">
+          <div class="card-header">
+            <h3>🏆 Champion Probabilities</h3>
+            <span class="card-badge">Monte Carlo</span>
+          </div>
+          <div class="chart-container" style="height:220px">
+            <canvas id="chart-monte-carlo"></canvas>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>📊 Model Comparison</h3>
+            <span class="card-badge">Validation 2022-23</span>
+          </div>
+          <table class="mini-table">
+            <thead>
+              <tr><th>Model</th><th>Accuracy</th><th>Log-loss</th><th>F1</th></tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>XGBoost</strong></td>
+                <td class="accent-text">59.7%</td>
+                <td>0.893</td>
+                <td>0.436</td>
+              </tr>
+              <tr>
+                <td>Logistic Reg.</td>
+                <td>53.8%</td>
+                <td>0.937</td>
+                <td>0.512</td>
+              </tr>
+              <tr>
+                <td>Baseline</td>
+                <td>50.0%</td>
+                <td>1.099</td>
+                <td>0.333</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px">
+            <div class="feat-row">
+              <span class="feat-label">Features</span>
+              <span class="feat-count">13</span>
+            </div>
+            <div class="feat-row">
+              <span class="feat-label">Train rows</span>
+              <span class="feat-count">44,837</span>
+            </div>
+            <div class="feat-row">
+              <span class="feat-label">Val rows</span>
+              <span class="feat-count">2,024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card final-card">
+          <div class="card-header">
+            <h3>⚽ Predicted Final</h3>
+            <span class="card-badge gold-badge">July 19, 2026</span>
+          </div>
+          <div class="final-matchup">
+            <div class="finalist">
+              <div class="finalist-flag">🇪🇸</div>
+              <div class="finalist-name">Spain</div>
+              <div class="finalist-elo">ELO 2072</div>
+            </div>
+            <div class="vs-divider">
+              <div class="vs-text">VS</div>
+              <div class="vs-time">19:00 UTC</div>
+            </div>
+            <div class="finalist winner-finalist">
+              <div class="finalist-flag">🇦🇷</div>
+              <div class="finalist-name">Argentina</div>
+              <div class="finalist-elo">ELO 2090</div>
+              <div class="finalist-winner-badge">🏆 Predicted</div>
+            </div>
+          </div>
+          <div class="final-probs">
+            <div class="prob-bar-row">
+              <span>Spain win</span>
+              <div class="prob-bar-track"><div class="prob-bar-fill" style="width:37%"></div></div>
+              <span>37%</span>
+            </div>
+            <div class="prob-bar-row">
+              <span>Draw</span>
+              <div class="prob-bar-track"><div class="prob-bar-fill neutral" style="width:9%"></div></div>
+              <span>9%</span>
+            </div>
+            <div class="prob-bar-row">
+              <span>Argentina win</span>
+              <div class="prob-bar-track"><div class="prob-bar-fill accent" style="width:54%"></div></div>
+              <span>54%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: ELO Rankings + Feature Importances -->
+      <div class="cards-row-2">
+        <div class="card">
+          <div class="card-header">
+            <h3>📈 Top 10 ELO Rankings</h3>
+            <span class="card-badge">Post-2024</span>
+          </div>
+          <table class="rank-table">
+            <thead><tr><th>#</th><th>Team</th><th>ELO</th><th>Rating</th></tr></thead>
+            <tbody id="elo-table-dash"></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>🔑 Feature Importances</h3>
+            <span class="card-badge">XGBoost</span>
+          </div>
+          <div id="feature-bars"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAGE: DATA EXPLORER ──────────────────────────────── -->
+    <div id="page-explorer" class="page">
+      <div class="page-header">
+        <h2>Data Explorer</h2>
+        <p>149 years of international football — 49,459 matches across 243 nations</p>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label>Decade</label>
+          <select id="filter-decade" class="filter-select">
+            <option value="all">All decades</option>
+            <option value="1980">1980s</option>
+            <option value="1990">1990s</option>
+            <option value="2000">2000s</option>
+            <option value="2010">2010s</option>
+            <option value="2020">2020s</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Tournament Type</label>
+          <select id="filter-tournament" class="filter-select">
+            <option value="all">All types</option>
+            <option value="wc">World Cup</option>
+            <option value="euro">UEFA / CONMEBOL</option>
+            <option value="friendly">Friendlies</option>
+          </select>
+        </div>
+        <button class="filter-btn" onclick="applyFilters()">Apply Filters</button>
+      </div>
+
+      <div class="charts-grid-2x3">
+        <div class="card">
+          <div class="card-header"><h3>⚽ Goals per Decade</h3></div>
+          <div class="chart-container"><canvas id="chart-goals-decade"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>📊 Match Result Distribution</h3></div>
+          <div class="chart-container"><canvas id="chart-results-donut"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>🏅 Top 10 Nations — Win Rate</h3></div>
+          <div class="chart-container"><canvas id="chart-winrate"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>📉 Goal Type by Decade</h3></div>
+          <div class="chart-container"><canvas id="chart-goal-type"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>🥇 Top 10 All-Time Scorers</h3></div>
+          <div class="chart-container"><canvas id="chart-scorers"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>📐 ELO Distribution</h3></div>
+          <div class="chart-container"><canvas id="chart-elo-dist"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAGE: PREDICTIONS ────────────────────────────────── -->
+    <div id="page-predictions" class="page">
+      <div class="page-header">
+        <h2>Predictions</h2>
+        <p>XGBoost + Logistic Regression predictions for all unfinished WC 2026 matches</p>
+      </div>
+
+      <!-- Model Performance Table -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-header">
+          <h3>📊 Model Performance — Validation Set (2022-2023)</h3>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Model</th><th>Accuracy</th><th>Log-loss</th><th>F1 Macro</th>
+                <th>H-win Prec.</th><th>Draw Prec.</th><th>A-win Prec.</th><th>Training Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-orange">XGBoost ⭐</span></td>
+                <td class="accent-text fw-700">59.73%</td>
+                <td>0.8933</td>
+                <td>0.4357</td>
+                <td>68.2%</td><td>42.1%</td><td>55.4%</td>
+                <td>~12 s</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-blue">Logistic Reg.</span></td>
+                <td>53.75%</td>
+                <td>0.9369</td>
+                <td>0.5115</td>
+                <td>60.3%</td><td>47.2%</td><td>50.8%</td>
+                <td>&lt;1 s</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-gray">Baseline (majority)</span></td>
+                <td>50.04%</td>
+                <td>1.099</td>
+                <td>0.333</td>
+                <td>50.0%</td><td>0%</td><td>0%</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Group Predictions -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-header">
+          <h3>🎯 Group Stage — Predicted Remaining Matches</h3>
+          <span class="card-badge">12 Predictions</span>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr><th>Group</th><th>Home</th><th></th><th>Away</th><th>Predicted</th><th>P(Home)</th><th>P(Draw)</th><th>P(Away)</th></tr>
+            </thead>
+            <tbody id="predictions-table"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Championship Probability Chart -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-header">
+          <h3>🏆 Championship Probability — Monte Carlo (5,000 runs)</h3>
+        </div>
+        <div class="chart-container" style="height:400px">
+          <canvas id="chart-champ-probs"></canvas>
+        </div>
+      </div>
+
+      <!-- Predicted Group Winners -->
+      <div class="card">
+        <div class="card-header">
+          <h3>🥇 Predicted Group Winners</h3>
+          <span class="card-badge">12 Groups</span>
+        </div>
+        <div id="group-winners-grid" class="group-winners-grid"></div>
+      </div>
+    </div>
+
+    <!-- ── PAGE: ELO RANKINGS ────────────────────────────────── -->
+    <div id="page-elo" class="page">
+      <div class="page-header">
+        <h2>ELO Rankings</h2>
+        <p>Custom ELO rating system trained on 49,459 matches — K-factors weighted by tournament prestige</p>
+      </div>
+
+      <div class="cards-row-2" style="margin-bottom:24px">
+        <!-- Top 20 ELO Table -->
+        <div class="card">
+          <div class="card-header">
+            <h3>🏅 Top 20 Teams</h3>
+            <span class="card-badge">Post all matches</span>
+          </div>
+          <table class="rank-table">
+            <thead>
+              <tr><th>#</th><th>Team</th><th>ELO</th><th>Rating bar</th></tr>
+            </thead>
+            <tbody id="elo-table-full"></tbody>
+          </table>
+        </div>
+
+        <!-- ELO System Parameters -->
+        <div class="card">
+          <div class="card-header">
+            <h3>⚙️ ELO System Parameters</h3>
+          </div>
+          <div class="param-grid">
+            <div class="param-card">
+              <div class="param-icon">🏆</div>
+              <div class="param-label">FIFA World Cup</div>
+              <div class="param-value">K = 60</div>
+            </div>
+            <div class="param-card">
+              <div class="param-icon">🌍</div>
+              <div class="param-label">UEFA / CONMEBOL / CAF</div>
+              <div class="param-value">K = 40</div>
+            </div>
+            <div class="param-card">
+              <div class="param-icon">🌐</div>
+              <div class="param-label">Other Tournaments</div>
+              <div class="param-value">K = 35</div>
+            </div>
+            <div class="param-card">
+              <div class="param-icon">🤝</div>
+              <div class="param-label">Friendlies</div>
+              <div class="param-value">K = 20</div>
+            </div>
+            <div class="param-card">
+              <div class="param-icon">🏠</div>
+              <div class="param-label">Home Advantage</div>
+              <div class="param-value">+100 ELO</div>
+            </div>
+            <div class="param-card">
+              <div class="param-icon">🔰</div>
+              <div class="param-label">Starting Rating</div>
+              <div class="param-value">1500</div>
+            </div>
+          </div>
+          <div style="margin-top:20px">
+            <div class="card-header" style="padding:0 0 12px 0"><h3>📋 ELO Formula</h3></div>
+            <div class="formula-box">
+              <div class="formula-line">E<sub>A</sub> = 1 / (1 + 10<sup>(R<sub>B</sub> − R<sub>A</sub>) / 400</sup>)</div>
+              <div class="formula-line">R'<sub>A</sub> = R<sub>A</sub> + K × (S<sub>A</sub> − E<sub>A</sub>)</div>
+            </div>
+            <div class="formula-note">Snapshot captured <em>before</em> update to avoid data leakage in ML features.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ELO Trajectory Chart -->
+      <div class="card">
+        <div class="card-header">
+          <h3>📈 ELO Trajectory — Top Nations (1990 – 2024)</h3>
+        </div>
+        <div class="chart-container" style="height:380px">
+          <canvas id="chart-elo-trajectory"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAGE: WC 2026 ─────────────────────────────────────── -->
+    <div id="page-wc2026" class="page">
+      <div class="page-header">
+        <h2>World Cup 2026</h2>
+        <p>Live group standings, knockout bracket, and tournament statistics</p>
+      </div>
+
+      <!-- KPI Row -->
+      <div class="kpi-grid" style="margin-bottom:24px">
+        <div class="kpi-card">
+          <div class="kpi-icon">✅</div>
+          <div class="kpi-body">
+            <div class="kpi-value">60</div>
+            <div class="kpi-label">Matches Played</div>
+            <div class="kpi-sub">Group stage</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">⚽</div>
+          <div class="kpi-body">
+            <div class="kpi-value" id="total-goals-kpi">—</div>
+            <div class="kpi-label">Total Goals</div>
+            <div class="kpi-sub">Group stage</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">📊</div>
+          <div class="kpi-body">
+            <div class="kpi-value" id="avg-goals-kpi">—</div>
+            <div class="kpi-label">Goals per Match</div>
+            <div class="kpi-sub">Avg (finished)</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">🌟</div>
+          <div class="kpi-body">
+            <div class="kpi-value">Group F</div>
+            <div class="kpi-label">Most Goals Group</div>
+            <div class="kpi-sub">26 goals (NED/JPN/SWE/TUN)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goals per Group -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-header">
+          <h3>⚽ Goals per Group — Group Stage</h3>
+        </div>
+        <div class="chart-container" style="height:300px">
+          <canvas id="chart-goals-group"></canvas>
+        </div>
+      </div>
+
+      <!-- Group Standings Grid -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-header">
+          <h3>📋 Group Standings</h3>
+          <span class="card-badge">All 12 Groups</span>
+        </div>
+        <div id="group-standings-grid" class="standings-outer-grid"></div>
+      </div>
+
+      <!-- Knockout Bracket -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-header">
+          <h3>🏆 Knockout Bracket — Predicted Path</h3>
+          <span class="card-badge gold-badge">Argentina wins</span>
+        </div>
+        <div class="bracket-scroll">
+          <div id="ko-bracket" class="ko-bracket"></div>
+        </div>
+      </div>
+
+      <!-- Result Split + Shootout Stats -->
+      <div class="cards-row-2">
+        <div class="card">
+          <div class="card-header">
+            <h3>📊 Group Stage Result Split</h3>
+          </div>
+          <div class="chart-container" style="height:260px">
+            <canvas id="chart-wc-results"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>🥅 Group Stage Stats</h3>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">31</div>
+              <div class="stat-label">Home Wins</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">16</div>
+              <div class="stat-label">Draws</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">13</div>
+              <div class="stat-label">Away Wins</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">7-1</div>
+              <div class="stat-label">Biggest Win</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">6-0</div>
+              <div class="stat-label">2nd Biggest</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">2.95</div>
+              <div class="stat-label">Goals/Game</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
